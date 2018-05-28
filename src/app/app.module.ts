@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -20,6 +22,33 @@ import { Http } from '@angular/http';
 import { AuthConfig, AuthHttp } from 'angular2-jwt';
 import {AppRoutingModule} from './app-routing.module';
 import {SecurityModule} from './security/security.module';
+import {
+  MatAutocompleteModule,
+  MatButtonModule, MatButtonToggleModule, MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule, MatDialogModule, MatExpansionModule, MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
 
 export function authHttpServiceFactory(http: Http) {
   return new AuthHttp(new AuthConfig({
@@ -43,7 +72,20 @@ export function authHttpServiceFactory(http: Http) {
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    SecurityModule
+    SecurityModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule, MatButtonModule,
+    MatButtonToggleModule, MatCardModule,
+    MatCheckboxModule, MatChipsModule, MatDatepickerModule,
+    MatDialogModule, MatExpansionModule, MatGridListModule,
+    MatIconModule, MatInputModule, MatListModule, MatMenuModule,
+    MatNativeDateModule, MatPaginatorModule, MatProgressBarModule,
+    MatProgressSpinnerModule, MatRadioModule, MatRippleModule,
+    MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule,
+    MatSnackBarModule, MatSortModule, MatTableModule,
+    MatTabsModule, MatToolbarModule, MatTooltipModule,
+    FlexLayoutModule,
+
   ],
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
