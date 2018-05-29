@@ -1,3 +1,5 @@
+este error sale cuando compilo
+
 :\repositorioGithub\ssi-frontend>ng serve
 Cannot destructure property `createHash` of 'undefined' or 'null'.
 TypeError: Cannot destructure property `createHash` of 'undefined' or 'null'.
